@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Month"
+        android:textAlignment="center"
+        android:textSize="25sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.kizitonwose.calendar.view.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10sp"
+        android:padding="20dp"
+        app:cv_dayViewResource="@layout/calendar_day_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+s
+
+    <Button
+        android:id="@+id/FilterStartButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="날짜 범위 정하기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/FilterClearButton"
+        android:layout_width="00dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="날짜 필터 해제"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/FilterStartButton"
+        app:layout_constraintTop_toTopOf="@+id/FilterStartButton" />
+
+    <TextView
+        android:id="@+id/DateStartText"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borderstyle"
+        android:gravity="center"
+
+        android:text="startDate"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/FilterStartButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/DateEndText"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/borderstyle"
+
+        android:gravity="center"
+        android:text="endDate"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/DateStartText"
+        app:layout_constraintTop_toTopOf="@+id/DateStartText"
+
+        />
+
+    <Button
+        android:id="@+id/CLoseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="15dp"
+        android:text="Apply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
